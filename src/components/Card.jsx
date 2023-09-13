@@ -5,7 +5,7 @@ import { DailyWeather } from "./DailyWeather"
 
 
 export const Card = ({ climate, img, climatePerHour }) => {
-    if(climate.message) return (<h3>La ciudad ingresada no exite</h3>) 
+    if(climate.message) return (<h3>The city entered is not valid</h3>) 
     if(climatePerHour.message) return
 
     const iconURL = `https://openweathermap.org/img/wn/${climate.weather[0].icon}@2x.png`
