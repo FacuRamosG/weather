@@ -7,7 +7,6 @@ import { createClient } from 'pexels';
 import { TextField, Typography } from '@mui/material';
 import env from "react-dotenv";
 
-console.log(env.API_KEY_IMAGE)
 const client = createClient(env.API_KEY_IMAGE)
 let timer
 const timeout = 500
