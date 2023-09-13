@@ -9,7 +9,7 @@ import env from "react-dotenv";
 
 const client = createClient(env.API_KEY_IMAGE)
 let timer
-const timeout = 500
+const timeout = 300
 
 function App() {
   const [search, setSearch] = useState('')
