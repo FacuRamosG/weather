@@ -1,0 +1,4 @@
+window.env = {
+  "API_KEY_WEATHER": "4d464bc087fcc4495b61089c847a6510",
+  "API_KEY_IMAGE": "R82sz5IMDCA5m3cRmSEbzZgp977SrI1ht8NosMyIbQx2IFxocnY75qF7"
+};

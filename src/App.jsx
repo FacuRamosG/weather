@@ -5,8 +5,10 @@ import { useState } from 'react'
 import { Card } from './components/Card'
 import { createClient } from 'pexels';
 import { TextField, Typography } from '@mui/material';
+import env from "react-dotenv";
 
-const client = createClient(process.env.API_KEY_IMAGE)
+console.log(env.API_KEY_IMAGE)
+const client = createClient(env.API_KEY_IMAGE)
 let timer
 const timeout = 500
 
@@ -19,12 +21,12 @@ function App() {
   useEffect(() => {
     if(search === '') return
 
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=${process.env.API_KEY_WEATHER}&units=metric`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=${env.API_KEY_WEATHER}&units=metric`)
       .then(response => response.json())
       .then(data => setClimate(data))
       .catch (error => console.log(error)) 
 
-    fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${search}&appid=${process.env.API_KEY_WEATHER}&units=metric`)
+    fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${search}&appid=${env.API_KEY_WEATHER}&units=metric`)
       .then(response => response.json())
       .then(data => setClimatePerHour(data))
       .catch (error => console.log(error)) 
